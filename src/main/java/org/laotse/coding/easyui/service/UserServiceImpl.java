@@ -95,9 +95,7 @@ public class UserServiceImpl implements UserService {
 			return null;
 		}
 		if (users.containsKey(id)) {
-			User user = users.get(id);
-			users.remove(id);
-			return user;
+			return users.remove(id);
 		}
 		for (User user : users.values()) {
 			if (StringUtils.equals(id, user.getEmail())) {
