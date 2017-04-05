@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Easy UI</title>
+<link rel="stylesheet" type="text/css" href="lib/semantic/semantic.css" />
+<script src="lib/jquery/jquery-3.2.0.js"></script>
+<script src="lib/semantic/semantic.js"></script>
+<script src="index.js"></script>
+<style type="text/css">
+#primary-content {
+	padding-top: 5px;
+	padding-left: 5px;
+}
+</style>
+</head>
+<body>
+	<div id="top-menu" class="ui inverted menu">
+		<a class="item" href="index.html"><i class="home icon"></i>Home</a>
+		<div class="ui dropdown item">
+			System <i class="dropdown icon"></i>
+			<div class="menu">
+				<a class="item" href="system/environment.html">Environment</a> 
+				<a class="item" href="system/configuration.html">Configuration</a>
+			</div>
+		</div>
+		<div class="right menu">
+			<div class="item">
+				<div class="ui transparent inverted icon input">
+					<i class="search icon"></i> <input type="text" placeholder="Search">
+				</div>
+			</div>
+			<a class="item" onclick="signout(); return false;"><i
+				class="sign out icon"></i></a>
+		</div>
+	</div>
+	<div id="primary-content">
+	</div>
+</body>
+</html>
