@@ -27,6 +27,22 @@ import org.springframework.stereotype.Service;
 public class ProductServiceImpl implements ProductService {
 	
 	private Map<String, Product> products = new ConcurrentHashMap<>();
+	
+	{
+		for (int i = 0; i < 10; i++) {
+			Product product = new Product();
+			product.setName(UuidUtils.generateNewId());
+			product.setOfflineDate(System.currentTimeMillis() + 1000000L);
+			product.setOnlineDate(System.currentTimeMillis() - 1000000L);
+			product.setReleaseDate(System.currentTimeMillis() - 2000000L);
+			product.setOwner(i % 2 == 0 ? "admin" : "anyous");
+			product.setPm(i % 2 == 0 ? "tiger" : "fish");
+			product.setType(i % 2 == 0 ? "MobilePay" : "OnlinePay");
+			product.setVersion(i % 2 == 0 ? "1.0" : "2.0");
+			product.setVision(i % 2 == 0 ? "我欲成仙 快乐齐天" : "跳出三界之外 不在五行之中");
+			create(product);
+		}
+	}
 
 	/* (non-Javadoc)
 	 * @see org.laotse.coding.easyui.service.ProductService#create(org.laotse.coding.easyui.model.Product)

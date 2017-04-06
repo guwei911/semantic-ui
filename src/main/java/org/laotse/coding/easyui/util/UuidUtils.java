@@ -25,7 +25,7 @@ public class UuidUtils {
 	
 	public static String generateNewId(boolean containSeprate, boolean toUpperCase) {
 		String id = UUID.randomUUID().toString();
-		id = toUpperCase ? id.toLowerCase() : id;
+		id = toUpperCase ? id.toUpperCase() : id;
 		return containSeprate ? id : id.replaceAll("-", "");
 	}
 
