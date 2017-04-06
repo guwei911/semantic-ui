@@ -64,3 +64,7 @@ function remove(uid) {
 function edit(uid) {
   console.log(uid);
 }
+
+function add() {
+  console.log("New wizard");
+}
