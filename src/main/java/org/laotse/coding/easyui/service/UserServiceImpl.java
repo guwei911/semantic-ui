@@ -27,6 +27,18 @@ import org.springframework.stereotype.Service;
 public class UserServiceImpl implements UserService {
 	
 	private Map<String, User> users = new ConcurrentHashMap<>();
+	
+	{
+		for (int i = 0; i < 10; i++) {
+			User user = new User();
+			user.setDept(i % 2 == 0 ? "Dev" : "Test");
+			user.setGender(i % 2 == 0 ? "F" : "M");
+			user.setEmail("sh" + (10000 + i) + "@laotse.com");
+			user.setName(UuidUtils.generateNewId());
+			user.setPassword("000000");
+			create(user);
+		}
+	}
 
 	/* (non-Javadoc)
 	 * @see org.laotse.coding.easyui.service.UserService#create(org.apache.catalina.User)
