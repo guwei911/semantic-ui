@@ -1,5 +1,5 @@
 
-var laotse = {};
+var laotse = laotse || {};
 
 laotse.isEmpty = function(str) {
   if (null == str || "string" != typeof(str)) {
