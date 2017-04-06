@@ -13,6 +13,7 @@ import java.util.List;
 import org.laotse.coding.easyui.model.Product;
 import org.laotse.coding.easyui.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -24,7 +25,9 @@ import org.springframework.web.bind.annotation.RestController;
  * @author ZhongWen Li (mailto: lizw@primeton.com)
  */
 @RestController
-@RequestMapping(ApiVersion.NOW + "/products")
+@RequestMapping(value = ApiVersion.NOW + "/products", 
+	produces = MediaType.APPLICATION_JSON_UTF8_VALUE, 
+	consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
 public class ProductApi {
 	
 	@Autowired
