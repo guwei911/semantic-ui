@@ -33,17 +33,17 @@ public class UserApi {
 	@Autowired
 	private UserService service;
 	
-	@RequestMapping(method = RequestMethod.GET, value = "/")
+	@RequestMapping(method = RequestMethod.GET)
 	public List<User> query() {
 		return service.query();
 	}
 	
-	@RequestMapping(method = RequestMethod.POST, value = "/")
+	@RequestMapping(method = RequestMethod.POST)
 	public User create(User user) {
 		return service.create(user);
 	}
 	
-	@RequestMapping(method = RequestMethod.PUT, value = "/")
+	@RequestMapping(method = RequestMethod.PUT)
 	public User update(User user) {
 		return service.update(user);
 	}

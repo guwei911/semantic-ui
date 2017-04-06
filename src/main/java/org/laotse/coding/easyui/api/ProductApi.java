@@ -33,17 +33,17 @@ public class ProductApi {
 	@Autowired
 	private ProductService service;
 	
-	@RequestMapping(method = RequestMethod.GET, value = "/")
+	@RequestMapping(method = RequestMethod.GET)
 	public List<Product> query(String name, String version, String type, String pm, String owner) {
 		return service.query(name, version, type, pm, owner);
 	}
 	
-	@RequestMapping(method = RequestMethod.POST, value = "/")
+	@RequestMapping(method = RequestMethod.POST)
 	public Product create(Product product) {
 		return service.create(product);
 	}
 	
-	@RequestMapping(method = RequestMethod.PUT, value = "/")
+	@RequestMapping(method = RequestMethod.PUT)
 	public Product update(Product product) {
 		return service.update(product);
 	}
