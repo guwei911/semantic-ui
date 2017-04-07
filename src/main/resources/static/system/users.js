@@ -27,7 +27,7 @@ function fillTableBody(users) {
   var html = "";
   for (var i = 0; i < users.length; i++) {
     var user = users[i];
-    console.log(user);
+    // console.log(user);
     html += ""
       + "<tr>"
       + "  <td>" + (user.id || "-") + "</td>"

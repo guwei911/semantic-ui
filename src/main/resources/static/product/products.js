@@ -27,7 +27,7 @@ function fillTableBody(products) {
   var html = "";
   for (var i = 0; i < products.length; i++) {
     var product = products[i];
-    console.log(product);
+    // console.log(product);
     html += ""
       + "<tr>"
       + "  <td>" + (product.id || "-") + "</td>"
