@@ -32,9 +32,9 @@ public class ProductServiceImpl implements ProductService {
 		for (int i = 0; i < 10; i++) {
 			Product product = new Product();
 			product.setName(UuidUtils.generateNewId());
-			product.setOfflineDate(System.currentTimeMillis() + 1000000L);
-			product.setOnlineDate(System.currentTimeMillis() - 1000000L);
-			product.setReleaseDate(System.currentTimeMillis() - 2000000L);
+			product.setOfflineDate(System.currentTimeMillis() + 1000000L * (i + 1));
+			product.setOnlineDate(System.currentTimeMillis() - 1000000L * (i + 1));
+			product.setReleaseDate(System.currentTimeMillis() - 2000000L * (i + 1));
 			product.setOwner(i % 2 == 0 ? "admin" : "anyous");
 			product.setPm(i % 2 == 0 ? "tiger" : "fish");
 			product.setType(i % 2 == 0 ? "MobilePay" : "OnlinePay");

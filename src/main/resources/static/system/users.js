@@ -42,15 +42,12 @@ function fillTableBody(users) {
       + "</tr>";
   }
   $("#js-tbody-users").empty().append(html);
-  for (var i = 0; i < users.length; i++) {
-    var user = users[i];
-    $(".delete.link").off("click").on("click", function () {
-      remove($(this).attr("uid"));
-    });
-    $(".edit.link").off("click").on("click", function () {
-      edit($(this).attr("uid"));
-    });
-  }
+  $(".delete.link").off("click").on("click", function () {
+    remove($(this).attr("uid"));
+  });
+  $(".edit.link").off("click").on("click", function () {
+    edit($(this).attr("uid"));
+  });
 }
 
 function getGenderDictName(id) {
